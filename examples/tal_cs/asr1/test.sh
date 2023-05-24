@@ -33,8 +33,8 @@ ckpt=$(basename ${conf_path} | awk -F'.' '{print $1}')
 echo "checkpoint name ${ckpt}"
 echo "${conf_path}"
 
-# audio_file="data/demo_01_03.wav"
-audio_file="data/1-1.wav"
+audio_file="data/demo_01_03.wav"
+# audio_file="data/1-1.wav"
 
 if [ ${stage} -le 0 ] && [ ${stop_stage} -ge 0 ]; then
     # test a single .wav file

@@ -50,6 +50,7 @@ for type in  attention_rescoring; do
     --opts decode.decode_batch_size ${batch_size} \
     --audio_file ${audio_file}
 
+    echo "$?"
     if [ $? -ne 0 ]; then
         echo "Failed in evaluation!"
         exit 1
