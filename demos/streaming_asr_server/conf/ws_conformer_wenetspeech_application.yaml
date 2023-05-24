@@ -29,7 +29,7 @@ asr_online:
     cfg_path: 
     decode_method: 
     force_yes: True
-    device: 'cpu' # cpu or gpu:id
+    device: 'gpu:0' #'cpu' # cpu or gpu:id
     decode_method: "attention_rescoring"
     continuous_decoding: True # enable continue decoding when endpoint detected
     num_decoding_left_chunks: -1

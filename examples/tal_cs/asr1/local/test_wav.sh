@@ -13,11 +13,11 @@ decode_config_path=$2
 ckpt_prefix=$3
 audio_file=$4
 
-mkdir -p data
-wget -nc https://paddlespeech.bj.bcebos.com/datasets/single_wav/zh/demo_01_03.wav -P data/
-if [ $? -ne 0 ]; then
-   exit 1
-fi
+# mkdir -p data
+# wget -nc https://paddlespeech.bj.bcebos.com/datasets/single_wav/zh/demo_01_03.wav -P data/
+# if [ $? -ne 0 ]; then
+#    exit 1
+# fi
 
 if [ ! -f ${audio_file} ]; then
     echo "Plase input the right audio_file path"
@@ -40,7 +40,7 @@ for type in  attention_rescoring; do
     batch_size=1
     output_dir=${ckpt_prefix}
     mkdir -p ${output_dir}
-    python3 -u ${BIN_DIR}/test_wav.py \
+    python -u ${BIN_DIR}/test_wav.py \
     --ngpu ${ngpu} \
     --config ${config_path} \
     --decode_cfg ${decode_config_path} \
